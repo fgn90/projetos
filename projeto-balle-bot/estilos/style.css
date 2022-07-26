@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
+
+/* VARIAVEL - Criação de variaveis para as fontes */
+:root {
+    --font-h1: 'Righteous', cursive;
+    --font-padrao: 'Sarala', sans-serif;
+
+    --cor1: #FFF2E7;
+    --cor2: #ECD6C4;
+}
+
+/* PADRÃO CSS - Reset do CSS */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* BODY - Configuração padrão */
+body {
+    width: 100%;
+    height: 100%;
+    font-size: 100%;
+    background: linear-gradient(68.15deg, #2F2325 16.62%, #8E5D52 85.61%);
+}
+
+/* HEADER - Configuração do cabeçalho */
+header.cabecalho {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+    padding: 24px;
+}
+
+/* HEADER - Configuração do tamanho da imagem */
+header.cabecalho .cabecalho-imagem {
+    height: 72px;
+}
+
+/* HEADER - Configuração do menu */
+header.cabecalho .cabecalho-menu {
+    display: flex;
+    gap: 32px;
+}
+
+/* HEADER - Configuração dos itens menu */
+header.cabecalho .cabecalho-menu .cabecalho-menu-item {
+    color: var(--cor1);
+    font-family: var(--font-padrao);
+    font-weight: 400;
+    font-size: 18px;
+
+}
+/* MAIN - Configuração da divisão entre o final do Header para o inicio do Main */
+main.conteudo {
+    margin-bottom: 48px;
+    border-top: 0.4px solid var(--cor1);
+    
+}
+
+/* MAIN / SECTION 1 - Configuração do FlexBox do conteudo principal */
+main.conteudo .conteudo-principal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+/* MAIN / SECTION 1 - Configuração do FlexBox do conteudo escrito */
+main.conteudo .conteudo-principal .conteudo-principal-escrito {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+/* MAIN / SECTION 1 - Configuração do título */
+main.conteudo .conteudo-principal .conteudo-principal-escrito .conteudo-principal-escrito-titulo {
+    font-family: var(--font-h1);
+    font-weight: 400;
+    font-size: 64px;
+
+    color: var(--cor1);
+}
+
+/* MAIN / SECTION 1 - Configuração do subtítulo */
+main.conteudo .conteudo-principal .conteudo-principal-escrito .conteudo-principal-escrito-subtitulo {
+    font-family: var(--font-padrao);
+    font-weight: 400;
+    font-size: 24px;
+
+    color: var(--cor2);
+}
+
+/* MAIN / SECTION 1 - Configuração do botão */
+main.conteudo .conteudo-principal .conteudo-principal-escrito .conteudo-principal-escrito-botao {
+    width: 185px;
+    height: 60px;
+    
+    border: none;
+    border-radius: 20px;
+
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    background-color: var(--cor2);
+    
+    font-family: var(--font-padrao);
+    font-weight: 400;
+    font-size: 24px;
+    color: #2F2325;
+
+    cursor: pointer;
+}
+
+/* MAIN / SECTION 1 - Configuração do botão efeito do botão */
+main.conteudo .conteudo-principal .conteudo-principal-escrito .conteudo-principal-escrito-botao:hover  {
+    background-color: rgba(236, 214, 196, 0.53);
+}
+
+/* MAIN / SECTION 1 - Configuração do tamanho da imagem */
+main.conteudo .conteudo-principal .conteudo-principal-imagem {
+    height: 430px;
+}
+
+/* MAIN / SECTION 2 - Configuração do FlexBox do conteudo secundario */
+main.conteudo .conteudo-secundario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-top: 48px;
+}
+
+/* MAIN / SECTION 2 - Configuração do título */
+main.conteudo .conteudo-secundario .conteudo-secundario-titulo {
+    border-top: 0.4px solid var(--cor1);
+    padding-top: 48px;
+    margin-bottom: 16px;
+
+    font-family: var(--font-h1);
+    font-weight: 400;
+    font-size: 24px;
+    color: #FFF2EF;
+}
+
+/* MAIN / SECTION 2 - Configuração do texto */
+main.conteudo .conteudo-secundario .conteudo-secundario-paragrafo {
+    font-family: var(--font-padrao);
+    font-weight: 300;
+    font-size: 18px;
+    color: var(--cor2);
+}
+
+/* FOOTER - Configuração da divisão entre o final do Main para o inicio do Footer */
+footer.rodape {
+    padding: 32px;
+    border-top: 0.4px solid var(--cor1);
+}
+
+/* FOOTER - Configuração da imagem */
+footer.rodape .rodape-imagem {
+    height: 48px;
+    display: block;
+    margin: 0 auto;
+}
