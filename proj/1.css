@@ -1,0 +1,30 @@
+
+body {
+    display: flex;
+}
+
+div.pai {
+    width: 500px;
+    height: 500px;
+    background-color: black;
+}
+
+div.filho {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 500px;
+    height: 500px;
+}
+
+div.filho:hover {
+    background-color: rgba(255, 255, 255, 0.178);
+    transition: 0.5s;
+}
+
+div.filho h1 {
+    color: white;
+    align-self: center;
+    margin: 0px;
+    padding: 0px;
+}

@@ -32,9 +32,9 @@ h4 {
 }
 
 h6 {
-    font-size: 12px;
-    font-weight: 700;
-
+    font-size: 12.5px;
+    font-weight: 600;
+    font-family: 'Bitter', serif;
 }
 
 p {
@@ -76,7 +76,7 @@ AEE1E1 */
     align-items: center;
     justify-content: space-between;
     padding: 0px 80px;
-    background-color: #e3e6f39c;
+    background-color: white; /* Possível cor: #e3e6f3e1*/
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.116);
     z-index: 999; /*PROCURAR SABER O QUE FAZ */
     /* Faz com que barra do menu fique travada e seguindo até o final do site */
@@ -125,9 +125,9 @@ AEE1E1 */
     bottom: -4px;
     left: 20px;
 }
-/* Página inicial */ 
 
-#principal {
+/* Título principal e foto de background */ 
+#prin-01 {
     background-image: url('imagens/banner/banner2.1.jpg');
     background-position: right top;
     background-repeat: no-repeat;
@@ -142,16 +142,16 @@ AEE1E1 */
     
 }
 
-#principal h4 {
+#prin-01 h4 {
     padding-bottom: 15px;
 }
 
-#principal h1 {
+#prin-01 h1 {
     padding-bottom: 15px;
     color: #fab298;
 }
 
-#principal button {
+#prin-01 button {
     height: 30px;
     width: 150px;
     
@@ -164,4 +164,134 @@ AEE1E1 */
     background-color: transparent;
     border: 1px solid black;
     cursor: pointer
+}
+
+/* Box de características da loja */
+#prin-02 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#prin-02 .carac-box {
+    width: 180px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0, 0, 0, 0.062);
+    border: 1px solid #fab298ab;
+    border-radius: 4px;
+    margin: 15px 0px;
+}
+
+#prin-02 .carac-box:hover {
+    box-shadow: 10px 10px 54px #fab29867;
+}
+/* Responsividade das imagens dos cads */
+#prin-02 .carac-box img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/*Estilo das boxes */
+#prin-02 .carac-box h6{
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    background-color: #EFC5A0;
+    color: rgb(34, 34, 34);
+}
+
+/* Adiciona background de acordo com a ordem dentro do parenteses, que segue a ordem de divs no HTML 
+#prin-02 .carac-box:nth-child(2) h6 {
+    background-color: black;
+}
+
+#prin-02 .carac-box:nth-child(3) h6 {
+    background-color: black;
+}
+
+#prin-02 .carac-box:nth-child(4) h6 {
+    background-color: black;
+}
+
+#prin-02 .carac-box:nth-child(5) h6 {
+    background-color: black;
+}
+*/
+
+#produto-1 {
+    text-align: center;
+    
+}
+
+#produto-1 .prod-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+}
+
+#produto-1 .prod {
+    position: relative;
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid rgba(0, 0, 0, 0.110);
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.1);
+    margin: 15px 0px;
+    transition: 0.2s ease;
+}
+
+#produto-1 .prod:hover {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.2); 
+}
+/* Responsividade na imagem, independente do tamanho dela */
+#produto-1 .prod img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+#produto-1 .prod .desc {
+    text-align: start;
+    padding: 10px 0px;
+}
+
+/* #produto-1 .prod .desc span {
+    color: black;
+    font-size: 12px;
+} */
+
+#produto-1 .prod .desc h5 {
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+/* Estilo para o ícone de estrela */
+#produto-1 .prod .desc i {
+    font-size: 12px;
+    color: rgb(243, 181, 25);
+}
+/* Estilo para o h4 da descrição */
+#produto-1 .prod .desc h4 {
+    padding-top: 7px;
+    font-size: 15px;
+    font-weight: 700;
+}
+/* Estilo para ícone de compra */
+#produto-1 .prod .card {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #dfa67371;
+    font-weight: 500;
+    color: #c78851;
+    border: 1px solid #EFC5A0;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
 }
