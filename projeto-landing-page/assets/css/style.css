@@ -13,7 +13,9 @@
 
     /*Variáveis de cores*/
     --primary-color: #0a1128;
+    --secondary-color: crimson;
     --white-color: #ffffff;
+    --light-gray-color: #eeeeee;
 
 }
 
@@ -57,6 +59,11 @@ h6 {
     font-size: 3.5rem; /*Equivalente a 35px, devido ao tamanho já declarado para o HTML*/
 }
 
+/*Configuração para que nenhuma tag A receba a decoração padrão de link*/
+a {
+    text-decoration: none;
+}
+
 /*Classe para configuração das sessões com fundo background-image*/
 .main-bg {
     background-image: url('/assets/img/main-bg.svg');
@@ -72,7 +79,7 @@ h6 {
 
 /*Classe para todas as sessões de conteúdo definindo um tamanho máximo de largura e centralização do conteúdo */
 .main-content {
-    max-width: 1200px;
+    max-width: 120rem;
     margin: 0 auto;
     padding: var(--gap);
 }
@@ -80,4 +87,77 @@ h6 {
 /*Classe para definir a altura mínima de uma sessão, cada sessão é a tela inteira.*/
 .section-view {
     min-height: 100vh; 
+}
+
+/*Classe para configuração do menu*/
+.menu {
+    width: 100%;
+    border-bottom: 0.1rem solid var(--light-gray-color);
+
+    position: fixed; /*Deixar o menu fixo mesmo com a página rolando*/
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/*Separação da logo para a lista de menu*/
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/*CLasse para configuração do h1 dentro do menu*/
+.menu h1 {
+    font-size: 2.3rem; /*Equivalente a 23px, devido ao tamanho já declarado para o HTML*/
+    color: var(--primary-color);
+}
+
+/*CLasse para configuração do A dentro do menu*/
+.menu h1 a {
+    color: inherit; /*inherit - Herda os valores da tag já definidas no pai*/
+}
+
+/*Classe para configuração da lista de menu*/
+.menu ul {
+    display: flex;
+    list-style: none;
+}
+
+.menu ul li {
+    list-style: none;
+}
+
+/*Classe para configuração das tags A dentro da lista, facilitando o manuseio para quando for alterado, não empurrar o container para baixo*/
+.menu ul li a {
+    display: block;/*Funciona para que o A da lista defina o tamanho da barra de menu*/
+
+    font-size: 1.8rem;/*Equivalente a 18px, devido ao tamanho já declarado para o HTML*/
+    color: var(--primary-color);
+
+    padding: 2rem; /*Equivalente a 20px, devido ao tamanho já declarado para o HTML*/
+
+    position: relative;
+}
+
+/*Adiciona estilo nos links do menu, criando a "borda" ao passar o mouse em cima*/
+.menu ul li a::after {
+    width: 0;
+    height: 0.2rem;
+
+    background-color: var(--secondary-color);
+
+    content: "";
+    position: absolute;
+    bottom: 1.5rem;
+    left: 2rem;
+    transition: all 300ms ease-in-out; /* Suaviza a troca de cor do hover */
+}
+
+/*Quando o mouse estiver em cima, aumenta a borda de 0 para 30% do objeto, criando o efeito embaixo do menu*/
+.menu ul li a:hover::after {
+    width: 30%;
 }
