@@ -1,0 +1,83 @@
+/*Resetando o HTML*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    /*Variáveis diversas*/
+    --gap: 3rem; /*Funciona para padronizar o padding em toda a página*/
+
+    /*Variáveis de fontes*/
+    --primary-text: 'Montserrat', sans-serif;
+    --secondary-text: 'Open Sans', sans-serif;
+
+    /*Variáveis de cores*/
+    --primary-color: #0a1128;
+    --white-color: #ffffff;
+
+}
+
+/*Preparando o HTML para trabalhar com a medida rem*/
+html {
+    font-size: 62.5%;
+}
+
+/*Definindo fonte padrão do body*/
+body {
+    font-family: var(--secondary-text);
+    font-size: 2rem; /*Equivalente a 16px, devido ao tamanho já declarado para o HTML*/
+    color: var(--primary-color);
+}
+
+/*Definindo fonte padrão dos headings*/
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--primary-text);
+}
+
+h1 {
+    font-size: 6rem; /*Equivalente a 60px, devido ao tamanho já declarado para o HTML*/
+    text-transform: uppercase;
+}
+h2 {
+    font-size: 5.5rem; /*Equivalente a 55px, devido ao tamanho já declarado para o HTML*/
+}
+
+h3 {
+    font-size: 5rem; /*Equivalente a 50px, devido ao tamanho já declarado para o HTML*/
+}
+
+h4 {
+    font-size: 4.5rem; /*Equivalente a 45px, devido ao tamanho já declarado para o HTML*/
+}
+h5 {
+    font-size: 4rem; /*Equivalente a 40px, devido ao tamanho já declarado para o HTML*/
+}
+
+h6 {
+    font-size: 3.5rem; /*Equivalente a 35px, devido ao tamanho já declarado para o HTML*/
+}
+
+/*Classe para configuração das sessões com fundo background-image*/
+.main-bg {
+    background-image: url('/assets/img/main-bg.svg');
+    background-size: cover;
+    background-position: right center;
+    color: var(--white-color);
+}
+
+/*Classe para configuração das sessões com fundo branco*/
+.white-bg {
+    background-color: var(--white-color);
+}
+
+/*Classe para todas as sessões de conteúdo definindo um tamanho máximo de largura e centralização do conteúdo */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--gap);
+}
+
+/*Classe para definir a altura mínima de uma sessão, cada sessão é a tela inteira.*/
+.section-view {
+    min-height: 100vh; 
+}
