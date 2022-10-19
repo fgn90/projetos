@@ -29,6 +29,7 @@ body {
     font-family: var(--secondary-text);
     font-size: 2rem; /*Equivalente a 16px, devido ao tamanho já declarado para o HTML*/
     color: var(--primary-color);
+    line-height: 1.5;
 }
 
 /*Definindo fonte padrão dos headings*/
@@ -89,6 +90,11 @@ a {
     min-height: 100vh; 
 }
 
+/*Devido ao menu ser fixo, é preciso aplicar uma div com o tamanho do menu para empurra o conteúdo para baixo e não ficar sobreposto*/
+.menu-spacing {
+    height: 6.5rem;
+}
+
 /*Classe para configuração do menu*/
 .menu {
     width: 100%;
@@ -98,6 +104,8 @@ a {
     top: 0;
     left: 0;
     right: 0;
+
+    z-index: 1; /*Traz para a frente todo o menu para que nada passe na frente dele ao scrollar para baixo*/
 }
 
 /*Separação da logo para a lista de menu*/
@@ -160,4 +168,37 @@ a {
 /*Quando o mouse estiver em cima, aumenta a borda de 0 para 30% do objeto, criando o efeito embaixo do menu*/
 .menu ul li a:hover::after {
     width: 30%;
+}
+
+/*Grid para fins didáticos, podendo ser utilizado FlexBox no lugar. Conteúdo da Intro*/
+.intro-content {
+    height: 100vh;
+    
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--gap);
+
+    position: relative;
+    top: -6.4rem;
+}
+
+/*Alinhamento dos textos em coluna ao centro da tela*/
+.intro-text-content, .intro-img {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+/*Configuração h2 página Intro*/
+.intro-text-content h2 {
+    font-size: 6rem;
+    text-transform: uppercase;
+    margin-bottom: 5rem;
+    line-height: 1.2;
+}
+
+/*Configuração do tamanho da imagem SVG da Página Intro*/
+.intro-img img {
+    max-width: 100%;
+    height: auto;
 }
