@@ -22,6 +22,7 @@
 /*Preparando o HTML para trabalhar com a medida rem*/
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth; /*Suaviza o "auto-scroll" quando clica no link do menu, criando um efeito melhor */
 }
 
 /*Definindo fonte padrão do body*/
@@ -42,7 +43,10 @@ h1 {
     text-transform: uppercase;
 }
 h2 {
-    font-size: 5.5rem; /*Equivalente a 55px, devido ao tamanho já declarado para o HTML*/
+    font-size: 6rem; /*Equivalente a 60px, devido ao tamanho já declarado para o HTML*/
+    text-transform: uppercase;
+    margin-bottom: 5rem;
+    line-height: 1.2;
 }
 
 h3 {
@@ -65,6 +69,11 @@ a {
     text-decoration: none;
 }
 
+/*Configuração para todos os elementos p*/
+p {
+    margin-bottom: 3rem;
+}
+
 /*Classe para configuração das sessões com fundo background-image*/
 .main-bg {
     background-image: url('/assets/img/main-bg.svg');
@@ -76,13 +85,14 @@ a {
 /*Classe para configuração das sessões com fundo branco*/
 .white-bg {
     background-color: var(--white-color);
+    color: var(--primary-color);
 }
 
 /*Classe para todas as sessões de conteúdo definindo um tamanho máximo de largura e centralização do conteúdo */
 .main-content {
     max-width: 120rem;
     margin: 0 auto;
-    padding: var(--gap);
+    padding: 8rem var(--gap);
 }
 
 /*Classe para definir a altura mínima de uma sessão, cada sessão é a tela inteira.*/
@@ -170,8 +180,8 @@ a {
     width: 30%;
 }
 
-/*Grid para fins didáticos, podendo ser utilizado FlexBox no lugar. Conteúdo da Intro*/
-.intro-content {
+/*Grid para fins didáticos, podendo ser utilizado FlexBox no lugar. Conteúdo da Home*/
+.home-content {
     height: 100vh;
     
     display: grid;
@@ -183,22 +193,95 @@ a {
 }
 
 /*Alinhamento dos textos em coluna ao centro da tela*/
-.intro-text-content, .intro-img {
+.home-text-content, .home-img {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
 }
 
-/*Configuração h2 página Intro*/
-.intro-text-content h2 {
-    font-size: 6rem;
-    text-transform: uppercase;
-    margin-bottom: 5rem;
-    line-height: 1.2;
-}
-
-/*Configuração do tamanho da imagem SVG da Página Intro*/
-.intro-img img {
+/*Configuração do tamanho da imagem SVG da Página Home*/
+.home-img img {
     max-width: 100%;
     height: auto;
+}
+
+/*Configuração do intro*/
+.intro-content {
+    max-width: 64rem;
+    min-height: 100vh;
+
+    text-align: center;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+
+/*Confusão no vídeo, id:grid-one é igual a id:top3, class:grid-one é igual a class:top3*/
+/*Configuração padrão da página Top 3*/
+.top-3 {
+    min-height: 100vh;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    
+}
+
+/*Configuração h2 top-3*/
+.top-3-content h2 {
+    margin-bottom: 1rem;
+
+}
+
+/*Configuração padrão para as descrições das páginas (P) das páginas*/
+.grid-description {
+    padding-bottom: 10rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+
+    counter-reset: gridcounter; /*Criação de contado para estilização*/
+}
+
+.grid h3 {
+    font-size: 3rem;
+    position: relative;
+
+    padding-left: 5rem;
+    padding-bottom: 2rem;
+}
+
+/*Estilização do conteúdo antes do título*/
+.grid h3::before {
+    /*Criação dos números anteriores ao título*/
+    counter-increment: gridcounter;
+    content: counter(gridcounter);
+
+    font-size: 8rem;
+    font-style: italic;
+
+    position: absolute; /*Sempre que um conteúdo estiver utilizando o position:absolute e não tiver um container segurando o item, é preciso colocar position:relative no item anterior*/
+    top: -4rem;
+    left: -2rem;
+
+    transform: rotate(5deg);/*Rotacionar o item em 5 graus*/
+}
+
+/*Configuração página work*/
+.work {
+    min-height: 100vh;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+}
+
+/*Configuração h2 work*/
+.work-content h2 {
+    padding-bottom: 10rem;
 }
