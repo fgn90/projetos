@@ -74,6 +74,34 @@ p {
     margin-bottom: 3rem;
 }
 
+/*Configuração de estilo para todas as tabelas*/
+table {
+    min-width: 3.6rem;
+    width: 100%;
+    border-collapse: collapse;/*Faz com que as bordas sejam uma só para cada lado*/
+}
+
+/*Configuração da legenda da tabela*/
+table caption {
+    font-style: italic;
+    font-size: 1.6rem;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+/*Configuração de estilo para todas linhas e títulos das tabelas*/
+table td, table th{
+    white-space: nowrap; /*Não permite que o texto quebre dentro da coluna*/
+    padding: 1rem;
+    text-align: left;
+    border: 0.1rem solid var(--light-gray-color);
+}
+
+/*Configuração cor de fundo para o título das tabelas e o rodapé das tabelas*/
+tfoot td, table th {
+    background-color: var(--light-gray-color);
+}
+
 /*Classe para configuração das sessões com fundo background-image*/
 .main-bg {
     background-image: url('/assets/img/main-bg.svg');
@@ -240,6 +268,7 @@ p {
     padding-bottom: 10rem;
 }
 
+/*Configuração padrão para as Grids*/
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -248,6 +277,7 @@ p {
     counter-reset: gridcounter; /*Criação de contado para estilização*/
 }
 
+/*Configuração padrão para o h3 das grids*/
 .grid h3 {
     font-size: 3rem;
     position: relative;
@@ -272,6 +302,32 @@ p {
     transform: rotate(5deg);/*Rotacionar o item em 5 graus*/
 }
 
+/*Configuração h2 gallery*/
+.gallery-content h2 {
+    margin-bottom: 1rem;
+
+}
+
+/*Configuração de tamanho das imagens do gallery*/
+.gallery-img {
+    width: 100%;
+    max-width: 36rem;
+    max-height: 36rem;
+    overflow: hidden;/*Não permite que as imagens criem barra de scroll ao ser diminuída pela página*/
+}
+
+/*Cria efeito suavizado na imagem*/
+.gallery-img img {
+    transition: all 300ms ease-in-out;
+}
+
+.gallery-img img:hover {
+    transform: translate(-3%, 3%) /*Primeira % para os lados, segunda para cima ou baixo*/
+    scale(1.2)/*Cria o efeito de zoom na imagem*/
+    rotate(5deg)/*Cria o efeito de rotação na imagem*/;
+}
+
+
 /*Configuração página work*/
 .work {
     min-height: 100vh;
@@ -284,4 +340,10 @@ p {
 /*Configuração h2 work*/
 .work-content h2 {
     padding-bottom: 10rem;
+}
+
+/*Configuração de responsividade da tabela*/
+.responsive-table {
+    overflow: hidden;
+    overflow-x: auto;
 }
