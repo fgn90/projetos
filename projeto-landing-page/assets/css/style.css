@@ -132,11 +132,6 @@ tfoot td, table th {
     min-height: 100vh; 
 }
 
-/*Devido ao menu ser fixo, é preciso aplicar uma div com o tamanho do menu para empurra o conteúdo para baixo e não ficar sobreposto*/
-.menu-spacing {
-    height: 6.5rem;
-}
-
 /*Classe para configuração do menu*/
 .menu {
     width: 100%;
@@ -214,6 +209,15 @@ tfoot td, table th {
 /*Quando o mouse estiver em cima, aumenta a borda de 0 para 30% do objeto, criando o efeito embaixo do menu*/
 .menu ul li a:hover::after {
     width: 30%;
+}
+
+.menu-spacing {
+    height: 65px;
+}
+
+/*Classe utilizada para criar o menu hambúrguer*/
+.close-menu {
+    display: none;
 }
 
 /*Grid para fins didáticos, podendo ser utilizado FlexBox no lugar. Conteúdo da Home*/
@@ -439,20 +443,56 @@ body .full-width {
     color: var(--primary-color);
 }
 
+/*Configuração de estilo do rodapé*/
 .footer {
    text-align: center;
    font-size: 1.6rem;
 }
 
+/*Configuração de estilo do P do rodapé*/
 .footer p {
     margin: 0;
     padding: 3rem;
 }
 
+/*Configuração de estilo do link do rodapé*/
 .footer a {
     color: var(--primary-color);
 }
 
+/*Configuração de estilo do ícone do rodapé*/
 .heart {
     color: var(--secondary-color);
 }
+
+/*Configuração do botão back-to-top*/
+.back-to-top {
+  position: fixed;  
+  bottom: 8rem;
+  right: 2rem;
+  background: var(--white-color);
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: var(--primary-color);
+  border: 0.1rem solid var(--light-gray-color);
+}
+
+/*Configuração do botão back-to-bottom*/
+.back-to-bottom {
+    position: fixed;  
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--white-color);
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--primary-color);
+    border: 0.1rem solid var(--light-gray-color);
+  }
